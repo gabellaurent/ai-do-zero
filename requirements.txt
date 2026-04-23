@@ -1,3 +1,2 @@
-sentence-transformers
-numpy
 torch
+numpy
