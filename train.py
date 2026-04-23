@@ -5,8 +5,8 @@ from model import MiniTransformer, device, block_size, batch_size
 # Configurações de treino
 max_iters = 5000
 eval_interval = 500
-learning_rate = 3e-4
-eval_iters = 200
+learning_rate = 1e-3
+eval_iters = 100
 
 # 1. Carregar o dataset
 with open('conversas_v2.txt', 'r', encoding='utf-8') as f:
@@ -75,7 +75,7 @@ def estimate_loss():
 print(f"{sum(p.numel() for p in model.parameters())/1e6}M parâmetros")
 
 # Criar um otimizador
-optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate)
+optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate, weight_decay=0.1)
 
 # Função para salvar o checkpoint
 def save_model(model, iter_count, loss_val):
@@ -91,32 +91,55 @@ def save_model(model, iter_count, loss_val):
     print(f"\n[SALVO] Modelo salvo em 'slm_model.pth' (Passo {iter_count}, Loss {loss_val:.4f})")
 
 # 4. Loop de Treinamento
-print("Iniciando treinamento... (Pressione Ctrl+C para parar e salvar o progresso atual)")
+print("\n" + "="*50)
+print("   INICIANDO TREINAMENTO EVOLUTIVO")
+print("="*50)
+print(f"Alvo: {max_iters} iterações | LR: {learning_rate}")
+print("Pressione Ctrl+C para parar e salvar a qualquer momento.\n")
+
 try:
-    # Começa do start_iter e vai até max_iters + start_iter para garantir que treine o total solicitado
     for iter in range(start_iter, start_iter + max_iters):
         
-        # a cada eval_interval, avalia a perda e salva o progresso
+        # Avaliação periódica
         if iter % eval_interval == 0 or iter == (start_iter + max_iters - 1):
             losses = estimate_loss()
-            print(f"passo {iter}: train loss {losses['train']:.4f}, val loss {losses['val']:.4f}")
+            
+            # Gerar uma amostra para ver a evolução
+            model.eval()
+            prompt = "Usuário: Quem é você? IA:"
+            context = torch.tensor([encode(prompt)], dtype=torch.long, device=device)
+            generated = model.generate(context, max_new_tokens=40)[0].tolist()
+            sample = decode(generated).replace('\n', ' ')
+            model.train()
+
+            print(f"\n[PASSO {iter}]")
+            print(f" > Loss Treino: {losses['train']:.4f}")
+            print(f" > Loss Validação: {losses['val']:.4f}")
+            print(f" > Amostra: {sample}")
+            print("-" * 30)
+            
             save_model(model, iter, losses['train'])
 
-        # sorteia um lote de dados
-        xb, yb = get_batch('train')
+        # Barra de progresso simplificada (usando ASCII para compatibilidade Windows)
+        if iter % 10 == 0:
+            progresso = ((iter - start_iter) / max_iters) * 100
+            barra = "#" * int(progresso / 5) + "." * (20 - int(progresso / 5))
+            print(f"\rProgresso: |{barra}| {progresso:.1f}% (Iter {iter})", end="", flush=True)
 
-        # avalia a perda
+        # Treino
+        xb, yb = get_batch('train')
         logits, loss = model(xb, yb)
         optimizer.zero_grad(set_to_none=True)
         loss.backward()
         optimizer.step()
 
 except KeyboardInterrupt:
-    print("\nTreinamento interrompido pelo usuário.")
+    print("\n\n[AVISO] Treinamento interrompido. Salvando progresso final...")
 finally:
-    # Tenta salvar o estado atual se iter existir
     try:
         save_model(model, iter, loss.item())
     except:
         pass
-    print("Treinamento finalizado.")
+    print("="*50)
+    print("   TREINAMENTO FINALIZADO")
+    print("="*50)

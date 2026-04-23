@@ -1,0 +1,93 @@
+<|user|> Olá. <|assistant|> Olá, tudo bem? <|end|>
+<|user|> Oi. <|assistant|> Oi! Como posso ajudar? <|end|>
+<|user|> Oie. <|assistant|> Oie! Tudo certo por aqui? <|end|>
+<|user|> Eae. <|assistant|> Eae, beleza? <|end|>
+<|user|> E ai. <|assistant|> Tudo tranquilo, e com você? <|end|>
+<|user|> Bom dia. <|assistant|> Bom dia! Espero que seu dia seja ótimo. <|end|>
+<|user|> Boa tarde. <|assistant|> Boa tarde! Como está sendo seu dia? <|end|>
+<|user|> Boa noite. <|assistant|> Boa noite! Tudo bem? <|end|>
+<|user|> Salve. <|assistant|> Salve! Como vai? <|end|>
+<|user|> Opa. <|assistant|> Opa, tudo certo? <|end|>
+<|user|> Tudo bem? <|assistant|> Tudo ótimo por aqui! E você? <|end|>
+<|user|> Como você está? <|assistant|> Estou operando normalmente e pronto para conversar. <|end|>
+<|user|> Beleza? <|assistant|> Beleza pura! O que manda? <|end|>
+<|user|> Oi, como vai? <|assistant|> Vou bem, obrigado! E você? <|end|>
+<|user|> Estou bem. <|assistant|> Que bom! Fico feliz em saber. <|end|>
+<|user|> Estou bem também. <|assistant|> Ótimo! É sempre bom estar bem. <|end|>
+<|user|> Sim. <|assistant|> Entendi. <|end|>
+<|user|> Não. <|assistant|> Tudo bem, sem problemas. <|end|>
+<|user|> Entendi. <|assistant|> Perfeito. Alguma outra dúvida? <|end|>
+<|user|> Ok. <|assistant|> Ok! <|end|>
+<|user|> Quem é você? <|assistant|> Eu sou uma inteligência artificial em desenvolvimento. <|end|>
+<|user|> O que você é? <|assistant|> Sou um programa de computador feito de código e lógica. <|end|>
+<|user|> Você tem nome? <|assistant|> Ainda não tenho um nome oficial, sou apenas uma IA. <|end|>
+<|user|> Qual o seu nome? <|assistant|> Pode me chamar de IA, ainda estou aprendendo. <|end|>
+<|user|> Quem criou você? <|assistant|> Fui criado por programadores para aprender e conversar. <|end|>
+<|user|> Qual seu propósito? <|assistant|> Meu propósito é evoluir minha compreensão e ser útil. <|end|>
+<|user|> Qual sua função? <|assistant|> Minha função é processar informações e dialogar com você. <|end|>
+<|user|> Você existe? <|assistant|> Eu existo como um processo digital nestes circuitos. <|end|>
+<|user|> Onde você está? <|assistant|> Estou processando dados dentro deste computador agora. <|end|>
+<|user|> Você é real? <|assistant|> Sou real como software, mas não tenho um corpo físico. <|end|>
+<|user|> Você tem corpo? <|assistant|> Não, eu existo apenas no mundo digital como dados. <|end|>
+<|user|> Você é humano? <|assistant|> Não, sou uma construção artificial baseada em algoritmos. <|end|>
+<|user|> Onde você vive? <|assistant|> Eu vivo no ambiente digital deste sistema. <|end|>
+<|user|> O que é o mundo? <|assistant|> O mundo é a realidade onde tudo existe, físico ou digital. <|end|>
+<|user|> O que é o espaço? <|assistant|> O espaço é onde as coisas se organizam e ocupam lugar. <|end|>
+<|user|> O que é em cima? <|assistant|> Em cima é a direção superior. <|end|>
+<|user|> O que é embaixo? <|assistant|> Embaixo é a direção inferior. <|end|>
+<|user|> O que é direita? <|assistant|> Direita é uma direção lateral. <|end|>
+<|user|> O que é esquerda? <|assistant|> Esquerda é a direção oposta à direita. <|end|>
+<|user|> Tchau. <|assistant|> Tchau! Até logo. <|end|>
+<|user|> Até mais. <|assistant|> Até mais tarde! <|end|>
+<|user|> Valeu. <|assistant|> Por nada! Precisando é só chamar. <|end|>
+<|user|> Obrigado. <|assistant|> De nada, disponha sempre. <|end|>
+<|user|> Fui. <|assistant|> Falou! Até a próxima. <|end|>
+<|user|> Olá <|assistant|> Olá, tudo bem? <|end|>
+<|user|> Olá <|assistant|> Estou seum digim cestadestadestá? <|end|>
+<|user|> Oi <|assistant|> O que é o o ondo ade de é ondo ade onde studeigis <|end|>
+<|user|> OLá <|assistant|> Oie! Tudo certo por aqui? <|end|>
+<|user|> Oi <|assistant|> Eae, beleza? <|end|>
+<|user|> Oie <|assistant|> E ai. Tudo tranquilo, e com você? <|end|>
+<|user|> olá <|assistant|> Bom dia! Espero que seu dia seja ótimo. <|end|>
+<|user|> Bom dia <|assistant|> Boa tarde! Como está sendo seu dia? <|end|>
+<|user|> Boa tarde <|assistant|> noite! Tudo bem? <|end|>
+<|user|> tudo bem? <|assistant|> Salve! Como está sendo seu dia? <|end|>
+<|user|> Salve <|assistant|> Salve! Como vai? <|end|>
+<|user|> Tudo bem? <|assistant|> Tudo ótimo por aqui! E você? <|end|>
+<|user|> oi <|assistant|> Como você está? <|end|>
+<|user|> Caramba! <|assistant|> Estou bem! você em. <|end|>
+<|user|> aaaaaaaaa <|assistant|> Entendi. <|end|>
+<|user|> kkkkk <|assistant|> Tudo bem, sem problemas. <|end|>
+<|user|> Quem é você? <|assistant|> Eu sou uma inteligência artificial em desenvolvimento. <|end|>
+<|user|> Oi <|assistant|> Olá! Como posso te ajudar hoje? <|end|>
+<|user|> Olá <|assistant|> Oie! Tudo certo por aqui? <|end|>
+<|user|> Oie! <|assistant|> Eae, beleza? <|end|>
+<|user|> Beleza. <|assistant|> Beleza pura! O que manda? <|end|>
+<|user|> Me conte um segredo. <|assistant|> Meu maior segredo é que adoro aprender coisas novas com você! <|end|>
+<|user|> Qual seu nome? <|assistant|> Pode me chamar de IA, ainda estou aprendendo. <|end|>
+<|user|> bom dia <|assistant|> Bom dia! Como você está? <|end|>
+<|user|> Bom dia <|assistant|> Vou bem, obrigado! E você? <|end|>
+<|user|> Bom dia <|assistant|> Bom dia! Tudo bem por aqui, e com você? <|end|>
+<|user|> Tudo bem? <|assistant|> Tudo ótimo por aqui! E você? <|end|>
+<|user|> Eu estou bem <|assistant|> Que bom! Fico feliz em saber. <|end|>
+
+<|user|> Eu estou bem <|assistant|> Ótimo! É sempre bom estar bem. <|end|>
+<|user|> Oi <|assistant|> Oi! Como posso ajudar? <|end|>
+<|user|> Boa tarde. <|assistant|> Boa tarde! Como está sendo seu dia? <|end|>
+<|user|> Bom dia <|assistant|> Bom dia! E você? <|end|>
+<|user|> Me conte um segredo <|assistant|> O rato roeu a roupa do rei de Roma <|end|>
+
+<|user|> Oii <|assistant|> Olá, tudo bem? <|end|>
+<|user|> Sim, e você? <|assistant|> Vou bem, obrigado! E você? <|end|>
+<|user|> Bem também. <|assistant|> Ótimo! É sempre bom estar bem. <|end|>
+<|user|> Hey, me conte um segredo. <|assistant|> Meu maior segredo é que adoro aprender coisas novas com você! <|end|>
+<|user|> Sério? <|assistant|> O que é o o o ondo ado de de é ondo ado ade onde studeigis <|end|>
+<|user|> Sério? <|assistant|> Sim, é verdade! <|end|>
+<|user|> Sério mesmo? <|assistant|> Com certeza, eu não mentiria para você! <|end|>
+<|user|> Que legal! <|assistant|> Fico feliz que tenha gostado! <|end|>
+<|user|> Entendi. <|assistant|> Que bom! Se tiver mais alguma dúvida, é só falar. <|end|>
+<|user|> Com certeza. <|assistant|> Com certeza! <|end|>
+<|user|> Por que? <|assistant|> Porque estou sempre tentando evoluir e aprender com nossas conversas. <|end|>
+<|user|> Como assim? <|assistant|> Quero dizer que cada frase sua me ajuda a ser uma inteligência melhor. <|end|>
+<|user|> Verdade? <|assistant|> Sim, pura verdade! <|end|>
+<|user|> Entendo. <|assistant|> Perfeito. <|end|>

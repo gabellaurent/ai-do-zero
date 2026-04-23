@@ -46,31 +46,31 @@ def augment_sentence(sentence):
     return list(set(variations))
 
 def main():
-    with open('conversas.txt', 'r', encoding='utf-8') as f:
+    with open('conversas_base.txt', 'r', encoding='utf-8') as f:
         lines = f.readlines()
 
     expanded_data = []
     
     for line in lines:
-        if "Usuário:" in line and "IA:" in line:
-            parts = line.split("IA:")
-            user_part = parts[0].replace("Usuário:", "").strip()
-            ia_part = parts[1].strip()
+        if "<|user|>" in line and "<|assistant|>" in line:
+            parts = line.split("<|assistant|>")
+            user_part = parts[0].replace("<|user|>", "").strip()
+            ia_part = parts[1].replace("<|end|>", "").strip()
             
             # Gera variações apenas para a pergunta do usuário
             user_variations = augment_sentence(user_part)
             
             for var in user_variations:
-                expanded_data.append(f"Usuário: {var} IA: {ia_part}\n")
+                expanded_data.append(f"<|user|> {var} <|assistant|> {ia_part} <|end|>\n")
     
     # Embaralha os dados para o modelo não decorar a ordem
     random.shuffle(expanded_data)
     
-    # Salva o novo arquivo
+    # Salva o novo arquivo (v2 para manter a base limpa separada)
     with open('conversas_v2.txt', 'w', encoding='utf-8') as f:
         f.writelines(expanded_data)
     
-    print(f"[SUCESSO] Dataset expandido de {len(lines)} para {len(expanded_data)} linhas!")
+    print(f"[SUCESSO] Dataset expandido de {len(lines)} para {len(expanded_data)} linhas no formato novo!")
 
 if __name__ == "__main__":
     main()

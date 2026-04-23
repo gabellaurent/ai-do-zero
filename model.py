@@ -2,13 +2,13 @@ import torch
 import torch.nn as nn
 from torch.nn import functional as F
 
-# Hiperparâmetros para um modelo mais capaz
-batch_size = 32
-block_size = 128 # Contexto máximo (dobrado)
-n_embd = 256     # Neurônios por camada (dobrado)
-n_head = 8       # Cabeças de atenção (dobrado)
-n_layer = 6      # Camadas de transformer (aumentado)
-dropout = 0.2    # Aumentado para evitar overfitting
+# Hiperparâmetros otimizados para treino rápido no CPU
+batch_size = 16
+block_size = 256 # Aumentado para suportar frases mais longas
+n_embd = 192
+n_head = 6
+n_layer = 6
+dropout = 0.2
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 class Head(nn.Module):
